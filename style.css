@@ -6,6 +6,34 @@
   text-decoration: none;
   line-height: 1.8;
 }
+header {
+  background-image: url(https://gridbyexample.com/img/inflicted.png);
+  height: 250px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  & .title {
+    padding: 10px 50px;
+  }
+  & a {
+    color: black;
+    font-weight: bold;
+  }
+  li {
+    padding: 15px 50px;
+  }
+  & li:hover {
+    background-color: #ffffffca;
+    transition: 1000ms;
+  }
+  & .menu {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #ffffffb5;
+    gap: 10px;
+  }
+}
 
 .grid-container {
   margin: auto;
@@ -13,7 +41,7 @@
   place-content: center;
   grid-template-columns: repeat(4, 300px);
   grid-template-rows: repeat(6, 229px);
-  gap: 15px;
+  gap: 25px;
 }
 .css-grid,
 .example,
@@ -66,7 +94,7 @@
   text-align: center;
   /* height: 20px; */
   color: white;
-  top: -4px;
+  top: -10px;
   left: -20px;
   transform: rotate(-11deg);
 }
@@ -107,6 +135,14 @@
 @media only screen and (max-width: 600px) {
   main {
     padding: 20px;
+  }
+  header {
+    height: auto;
+  }
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
   }
   .grid-container {
     /* background-color: aquamarine; */
